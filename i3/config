@@ -47,7 +47,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # Start terminal instance 
-bindsym $mod+Return exec alacritty 
+# bindsym $mod+Return exec alacritty 
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+Shift+w kill
@@ -189,7 +190,6 @@ default_border pixel
 default_floating_border pixel 0
 for_window [class=".*"] border pixel 0
 smart_borders on
-# client.focused #B5E8E0 #B5E8E0 #B5E8E0 #B5E8E0 #B5E8E0
 
 # Disable focus wrapping
 focus_wrapping no
@@ -199,26 +199,8 @@ gaps inner 12
 gaps outer -5
 # smart_gaps on
 
-# Start pulseaudio
-exec --no-startup-id pulseaudio --start
-
-# Start polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-
-# Start picom
-exec_always --no-startup-id ~/.config/picom/picom-launch.sh
-
-# Set monitor display 
-exec_always --no-startup-id ~/Configurations/monitor-setup.sh
-
-# Shortcut for flameshot
-bindsym $mod+Shift+s exec flameshot gui
-
 # Start dunst
 exec_always --no-startup-id dunst --config ~/.config/dunst/dunstrc
-
-# Remap Caps Lock to CTRL
-exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
