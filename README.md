@@ -4,7 +4,8 @@
 
 *heavily inspired by Catppuccin theme*
 
-![Desktop Screenshot](Images/screenshot.png)
+![Desktop Screenshot 1](Images/screenshot-1.png)
+![Desktop Screenshot 2](Images/screenshot-2.png)
 
 ### Credits/References
 * Window Manager - [Airblader/i3-gaps](https://github.com/Airblader/i3)
