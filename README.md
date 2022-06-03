@@ -6,13 +6,14 @@
 
 ![Desktop Screenshot 1](Images/screenshot-1.png)
 ![Desktop Screenshot 2](Images/screenshot-2.png)
+![Desktop Screenshot 3](Images/screenshot-3.png)
 
 ### Credits/References
 * Window Manager - [Airblader/i3-gaps](https://github.com/Airblader/i3)
 * Compositor - [ibhagwan/picom](https://github.com/ibhagwan/picom)
 * Theme - [Catppuccin](https://github.com/catppuccin/catppuccin)
 * Terminal - [kitty](https://github.com/kovidgoyal/kitty), [alacritty](https://github.com/alacritty/alacritty)
-* Shell - [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)
+* Shell - [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki) 
 * Text Editor - [NeoVim](https://github.com/neovim/neovim)
 * Status Bar - [polybar](https://github.com/polybar/polybar)
 * Notifications - [dunst](https://github.com/dunst-project/dunst)
