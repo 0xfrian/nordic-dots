@@ -6,73 +6,67 @@ local opts = {  noremap = true,
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "         -- remap <Leader> key to <Space>
-vim.g.maplocalleader = " "
+-- vim.g.mapleader = " "         -- remap <Leader> key  
+-- vim.g.maplocalleader = " "    -- remap <Leader> key 
 
 -- Modes
---    normal_mode =         "n",
---    insert_mode =         "i",
---    visual_mode =         "v",
---    visual_block_mode =   "x",
---    term_mode =           "t",
---    command_mode =        "c",
+--      all                 = "", 
+--      normal_mode         = "n",
+--      insert_mode         = "i",
+--      visual_mode         = "v",
+--      visual_block_mode   = "x",
+--      term_mode           = "t",
+--      command_mode        = "c",
 
--- Open Windows 
+-- Open Splits 
 keymap("n", "<Leader>v", ":vsplit<CR>", opts)
 keymap("n", "<Leader>h", ":split<CR>",  opts)
--- Navigate Between Windows 
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
--- Resize Windows 
-keymap("n", "<C-Up>",     ":resize -2<CR>",           opts)
-keymap("n", "<C-Down>",   ":resize +2<CR>",           opts)
+-- Directionally Navigate Between Splits 
+keymap("n", "<C-h>", "<C-w><Left>", opts)
+keymap("n", "<C-j>", "<C-w><Left>", opts)
+keymap("n", "<C-k>", "<C-w><Right>", opts)
+keymap("n", "<C-l>", "<C-w><Right>", opts)
+-- Resize Splits 
+keymap("n", "<C-Up>",     ":resize +2<CR>",           opts)
+keymap("n", "<C-Down>",   ":resize -2<CR>",           opts)
 keymap("n", "<C-Left>",   ":vertical resize -2<CR>",  opts)
 keymap("n", "<C-Right>",  ":vertical resize +2<CR>",  opts)
--- Close Current Window
+-- Close Current Split
 keymap("n", "<Leader>c",  ":<C-w>q<CR>", opts)
 
 -- Navigate Between Buffers
--- keymap("n", "<C-a>", ":bp<CR>", opts)
--- keymap("n", "<C-d>", ":bn<CR>", opts)
 keymap("n", "<C-Tab>",      ":bn<CR>", opts)
 keymap("n", "<C-S-Tab>",    ":bp<CR>", opts)
--- Open File in New Buffer
--- keymap("n", "<C-e>", ":e ", { noremap = true })
 -- Close Current Buffer
--- keymap("n", "<C-c>", ":bd<CR>", opts)
 keymap("n", "<C-c>", ":Bdelete<CR>", opts)  -- using bufdelete.nvim plugin
 
+-- Toggle Spellcheck
+keymap("n", "<Leader>s", ":set spell!<CR>", opts)
+-- Toggle Line Numbers
+keymap("n", "<Leader>n", ":set number!<CR>", opts)
+-- Toggle Linebreak
+keymap("n", "<Leader>b", ":set linebreak!<CR>", opts)
+-- Toggle Line Wrap
+keymap("n", "<Leader>w", ":set wrap!<CR>", opts)
+
+-- Toggle Markdown Preview
+keymap("n", "<C-m>", ":MarkdownPreview<CR>", opts)
 -- Toggle NvimTree 
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>",  opts)
-
 -- Toggle Telescope Find Files
 keymap("n", "<C-t>", ":Telescope find_files<CR>", opts)
 -- Toggle Telescope Live Grep
 keymap("n", "<C-g>", ":Telescope live_grep<CR>", opts)
 
 -- Navigating to Start/End of Line 
-keymap("n", "H", "^", opts) 
-keymap("n", "L", "$", opts) 
-keymap("v", "H", "^", opts) 
-keymap("v", "L", "$", opts) 
-keymap("x", "H", "^", opts) 
-keymap("x", "L", "$", opts) 
--- Navigating Up/Down Lines Fast
-keymap("n", "J", "5j", opts)
-keymap("n", "K", "5k", opts)
-keymap("v", "J", "5j", opts)
-keymap("v", "K", "5k", opts)
-keymap("x", "J", "5j", opts)
-keymap("x", "K", "5k", opts)
+keymap("", "H", "^", opts) 
+keymap("", "L", "$", opts) 
+-- Navigating Up/Down Lines faster
+keymap("", "J", "5j", opts)
+keymap("", "K", "5k", opts)
 -- Navigating Up/Down Visual Lines rather than Logical Lines
-keymap("n", "j", "gj", opts)
-keymap("n", "k", "gk", opts)
--- Navigating Up to Avoid Waiting timeoutlen 
--- keymap("n", "kk", "kk", opts)
--- keymap("v", "kk", "kk", opts)
--- keymap("x", "kk", "kk", opts)
+keymap("", "j", "gj", opts)
+keymap("", "k", "gk", opts)
 
 -- Deleting Text
 keymap("n", "dH", "d0", opts)
@@ -92,10 +86,7 @@ keymap("i", "<C-w>", "<Esc>:wq<CR>",  opts)
 keymap("v", "<C-w>", "<Esc>:wq<CR>",  opts)
 
 -- Escaping to Normal Mode
-keymap("i", "kj", "<Esc>l", opts)       -- using kj 
--- keymap("v", "kj", "<Esc>l", opts) 
--- keymap("x", "kj", "<Esc>l", opts) 
-keymap("i", "<Esc>", "<Esc>l",  opts);
+keymap("i", "kj", "<Esc>", opts)       -- using kj 
 
 -- Indent and Stay in Visual Mode
 keymap("v", "<", "<gv", opts)
@@ -104,20 +95,5 @@ keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
 
 -- Misc
--- keymap("n", "ff", "zz", opts)           -- Center cursor
-keymap("n", "<Esc>", ":noh<CR>l", opts)  -- Clear search pattern highlighting
-
--- Unmapping Default Keymappings
-keymap("n", "<C-b>", "<nop>", opts)   -- Unmap PgUp
-keymap("v", "<C-b>", "<nop>", opts)  
-keymap("x", "<C-b>", "<nop>", opts)  
-keymap("n", "<C-f>", "<nop>", opts)   -- Unmap PgDown
-keymap("v", "<C-f>", "<nop>", opts)   
-keymap("x", "<C-f>", "<nop>", opts)   
-keymap("n", "<C-a>", "<nop>", opts)   -- Unmap Ctrl+a 
-keymap("v", "<C-a>", "<nop>", opts)   
-keymap("x", "<C-a>", "<nop>", opts)   
-keymap("n", "<C-d>", "<nop>", opts)   -- Unmap Ctrl-d
-keymap("v", "<C-d>", "<nop>", opts)   
-keymap("x", "<C-d>", "<nop>", opts)   
+keymap("n", "<Esc>", ":noh<CR>", opts)     -- Clear search pattern highlighting
 
