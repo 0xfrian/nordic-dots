@@ -5,12 +5,13 @@
 *I know. I know. Yet another Catppuccin theme :P* 
 
 (Newer Version)
-![Desktop Screenshot](Images/desktop-screenshot.png)
+![Images/new-1.png](Images/new-1.png)
+![Images/new-2.png](Images/new-2.png)
 
 (Older Version)
-![Desktop Screenshot 1](Images/screenshot-1.png)
-![Desktop Screenshot 2](Images/screenshot-2.png)
-![Desktop Screenshot 3](Images/screenshot-3.png)
+![Images/old-1.png](Images/old-1.png)
+![Images/old-2.png](Images/old-2.png)
+![Images/old-3.png](Images/old-3.png)
 
 ### Credits/References
 * OS - [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux)
