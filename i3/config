@@ -57,6 +57,18 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+#Assign windows to workspaces
+workspace $ws1  output  HDMI1
+workspace $ws2  output  HDMI1
+workspace $ws3  output  HDMI1
+workspace $ws4  output  HDMI1
+workspace $ws5  output  HDMI1
+workspace $ws6  output  HDMI1
+workspace $ws7  output  eDP1
+workspace $ws8  output  eDP1
+workspace $ws8  output  eDP1
+workspace $ws9  output  eDP1
+workspace $ws10 output  eDP1
 # Focus workspaces
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -115,9 +127,19 @@ focus_follows_mouse no
 focus_wrapping no
 
 # === Border ===
-default_border pixel 0
-default_floating_border pixel 0
-for_window [class=".*"] border pixel 0
+default_border pixel 2
+# default_floating_border pixel 0
+# for_window [class=".*"] border pixel 0
+smart_borders no_gaps
+
+# === Colors ===
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #000000 #ffffff #000000   #000000
+client.focused_inactive #000000 #000000 #ffffff #000000   #000000
+client.unfocused        #000000 #000000 #ffffff #000000   #000000
+client.urgent           #000000 #000000 #ffffff #000000   #000000
+client.placeholder      #000000 #000000 #ffffff #000000   #000000
+client.background       #ffffff
 
 # === Gaps ===
 gaps inner 35

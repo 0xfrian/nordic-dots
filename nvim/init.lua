@@ -1,24 +1,34 @@
--- === Source plugins/settings ===
-require("settings.plugins")          -- Packer: plugin manager 
-require("settings.options")          -- NeoVim configuration
-require("settings.keymappings")      -- NeoVim keymappings
-require("settings.dracula")          -- Dracula: color theme
-require("settings.alpha")            -- Alpha: dashboard
-require("settings.nvim-tree")        -- Nvim-Tree: file explorer
-require("settings.nvim-treesitter")  -- Nvim-Treesitter: syntax highlighting 
-require("settings.autopairs")        -- AutoPairs: auto-complete parantheses/bracktes
-require("settings.autotag")          -- AutoTag: auto-complete html tags
-require("settings.comment")          -- Comment: comment multiple lines
-require("settings.cmp")              -- cmp: Auto-completion
-require("settings.indent-blankline") -- Indent-Blankline: indentation lines
-require("settings.telescope")        -- Telescope: fuzzy finder
-require("settings.lualine")          -- LuaLine: status bar
-require("settings.bufferline")       -- BufferLine: buffer bar
-require("settings.headlines")        -- Headlines: colored headings
-require("settings.colorizer")        -- Colorizer: colorize text
-require("settings.pretty-fold")      -- Pretty-Fold: fold indentation lines
-require("settings.scrollbar")        -- Scrollbar: scroll bar
-require("settings.gitsigns")         -- GitSigns: highlighting for Git
-require("settings.impatient")        -- Impatient: optimize NeoVim config
-require("settings.bufdel")           -- bufdel: Delete buffers with ease
+-- ============
+-- | init.lua |
+-- ============
 
+--- Plugins
+require("frian.packer")
+require("frian.plugins.alpha") -- Dashboard
+require("frian.plugins.autopairs") -- Auto-pair symbols: (), [], {}, <>
+require("frian.plugins.cmp") -- Auto-completion
+require("frian.plugins.cokeline") -- Bufferline
+require("frian.plugins.colorizer") -- Color code highlighting
+require("frian.plugins.comment") -- Shortcut commenting
+require("frian.plugins.gitsigns") -- Git gutter signs
+require("frian.plugins.impatient") -- Speed up start-time
+require("frian.plugins.indent-line") -- Show indentation lines
+require("frian.plugins.lualine") -- Statusline
+require("frian.plugins.neotree") -- File explorer
+require("frian.plugins.surround") -- nvim-surround
+require("frian.plugins.telescope") -- Fuzzy finder
+require("frian.plugins.tree") -- File explorer
+require("frian.plugins.treesitter") -- Syntax highlighting
+require("frian.plugins.trouble") -- Error logging
+require("frian.plugins.pretty-fold") -- Code block folding
+
+-- LSP
+require("frian.plugins.lsp.mason") -- LSP server manager
+require("frian.plugins.lsp.lspconfig") -- LSP server installer
+require("frian.plugins.lsp.lspsaga") -- LSP UI extension
+-- require("frian.plugins.lsp.null-ls")
+
+-- Core
+require("frian.core.colorscheme") -- Colorscheme
+require("frian.core.keymappings") -- Vim keymappings
+require("frian.core.options") -- Vim settings
