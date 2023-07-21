@@ -1,6 +1,6 @@
-# =========================
-# |  i3 config file (v4)  |
-# =========================
+# +----------------------+
+# |   i3 Configuration   |
+# +----------------------+
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -57,6 +57,18 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+#Assign windows to workspaces
+workspace $ws1  output  HDMI1
+workspace $ws2  output  HDMI1
+workspace $ws3  output  HDMI1
+workspace $ws4  output  HDMI1
+workspace $ws5  output  HDMI1
+workspace $ws6  output  HDMI1
+workspace $ws7  output  eDP1
+workspace $ws8  output  eDP1
+workspace $ws8  output  eDP1
+workspace $ws9  output  eDP1
+workspace $ws10 output  eDP1
 # Focus workspaces
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -109,15 +121,17 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+# === Tiling/Floating ===
+tiling_drag off
 
 # === Focus ===
 focus_follows_mouse no
 focus_wrapping no
 
 # === Border ===
-default_border pixel 3
-# default_floating_border pixel 0
-# for_window [class=".*"] border pixel 0
+default_border pixel 0
+default_floating_border pixel 0
+for_window [class=".*"] border pixel 0
 smart_borders no_gaps
 
 # === Colors ===
@@ -130,21 +144,22 @@ client.placeholder      #000000 #000000 #ffffff #000000   #000000
 client.background       #ffffff
 
 # === Gaps ===
-gaps inner 35
-gaps outer 12
+gaps inner 50
+gaps outer 10
 gaps top 70
-
 
 # === Startup scripts === 
 # Configure: keyboard + mouse + monitor + color-theme
-# exec_always --no-startup-id ~/Configurations/keyboard-mouse-setup.sh
-# exec_always --no-startup-id ~/Configurations/monitor-setup.sh
+exec_always --no-startup-id ~/Configurations/keyboard-mouse-setup.sh
+exec_always --no-startup-id ~/Configurations/monitor-setup.sh
 exec_always --no-startup-id ~/Configurations/wallpaper-setup.sh
-exec_always --no-startup-id ~/Configurations/theme-setup.sh
+exec_always --no-startup-id ~/Configurations/dark-theme-setup.sh
 # Configure: picom + polybar + dunst
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/.config/picom/launch.sh
 exec_always --no-startup-id ~/.config/dunst/launch.sh 
+# Launch flameshot (background process)
+exec_always --no-startup-id flameshot
 
 # === Keybindings ===
 # Screenshot (flameshot)
@@ -156,5 +171,5 @@ bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
 # Launch rofi: powermenu
 bindsym $mod+Escape exec --no-startup-id ~/.config/rofi/powermenu/type-2/powermenu.sh
 # Toggle output device between headphones/speakers 
-# bindsym $mod+Control+s exec --no-startup-id ~/Projects/bash-scripts/switch-audio.sh
+bindsym $mod+Control+s exec --no-startup-id ~/Projects/bash-scripts/switch-audio.sh
 
