@@ -69,7 +69,6 @@ return {
   -- +-----------+
   "windwp/nvim-autopairs",
   "windwp/nvim-ts-autotag",
-
   "kylechui/nvim-surround",
 
   -- +---------+
@@ -96,5 +95,10 @@ return {
   -- | Diagnostics |
   -- +-------------+
   "folke/trouble.nvim",
+
+  -- +------------------+
+  -- | Markdown Preview |
+  -- +------------------+
+  "iamcco/markdown-preview.nvim",
 }
 

@@ -137,4 +137,3 @@ keymap("", "<C-h>", "", opts)
 keymap("", "<C-j>", "", opts)
 keymap("", "<C-k>", "", opts)
 keymap("", "<C-l>", "", opts)
-
