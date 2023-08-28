@@ -8,7 +8,9 @@ return {
   -- +-------------+
   -- | Colorscheme |
   -- +-------------+
-  "Mofiqul/dracula.nvim",
+  -- "Mofiqul/dracula.nvim",
+  -- "AlexvZyl/nordic.nvim",
+  "shaunsingh/nord.nvim",
 
   -- +---------------------+
   -- | Syntax Highlighting |
@@ -58,6 +60,7 @@ return {
   -- | Buffer Line |
   -- +-------------+
   "willothy/nvim-cokeline",
+  -- "romgrk/barbar.nvim",
 
   -- +-----------------+
   -- | Git Integration |

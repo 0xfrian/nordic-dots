@@ -35,7 +35,7 @@ vim.opt.wrap = true -- enable line wrapping
 vim.opt.wrapmargin = 0
 vim.opt.linebreak = true -- break line at nearest word instead of char
 vim.opt.textwidth = 70
-vim.opt.colorcolumn = "70"
+-- vim.opt.colorcolumn = "70"
 vim.cmd([[ set formatoptions+=t ]])
 
 -- +--------+
@@ -54,7 +54,7 @@ vim.opt.cursorcolumn = true -- enable column highlight
 -- | Appearance |
 -- +------------+
 vim.opt.termguicolors = true -- enable more colors
-vim.opt.background = "dark" -- enable dark background
+-- vim.opt.background = "dark" -- enable dark background
 vim.opt.signcolumn = "yes" -- enable sign column
 
 -- +------+
