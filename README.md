@@ -24,8 +24,10 @@ configuration.
     >
 </picture>
 
-### 🔖 References
-Config
+---
+
+### References
+💾 Config
 - OS: [Arch Linux](https://archlinux.org/)
 - Window Manager: [i3](https://github.com/i3/i3)
 - Shell: [zsh](https://www.zsh.org/)
@@ -33,7 +35,7 @@ Config
 - Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 - Compositor: [picom](https://github.com/yshui/picom)
 
-Themes
+🎨 Themes / Colorschemes
 - [Dracula](https://draculatheme.com/)
     - [Dunst](https://github.com/dracula/dunst)
 - [Nord](https://www.nordtheme.com/)
