@@ -22,7 +22,7 @@ vim.opt.numberwidth = 1 -- set width of line number column
 vim.opt.tabstop = 2 -- set tab size to N spaces
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2 -- set shift width (width of auto-indent)
-vim.opt.showbreak = "›››" -- indicate line-break
+-- vim.opt.showbreak = "›››" -- indicate line-break
 vim.opt.autoindent = true -- enable auto-indent
 vim.opt.expandtab = true -- enable tabbing inserts spaces
 vim.opt.foldmethod = "indent" -- set folds to be defined by indents
@@ -35,7 +35,7 @@ vim.opt.wrap = true -- enable line wrapping
 vim.opt.wrapmargin = 0
 vim.opt.linebreak = true -- break line at nearest word instead of char
 vim.opt.textwidth = 70
-vim.opt.colorcolumn = "70"
+-- vim.opt.colorcolumn = "70"
 vim.cmd([[ set formatoptions+=t ]])
 
 -- +--------+
@@ -54,7 +54,7 @@ vim.opt.cursorcolumn = true -- enable column highlight
 -- | Appearance |
 -- +------------+
 vim.opt.termguicolors = true -- enable more colors
-vim.opt.background = "dark" -- enable dark background
+-- vim.opt.background = "dark" -- enable dark background
 vim.opt.signcolumn = "yes" -- enable sign column
 
 -- +------+

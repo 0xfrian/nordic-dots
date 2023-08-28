@@ -53,7 +53,7 @@ keymap("n", "<C-S-Tab>",  "<Plug>(cokeline-focus-prev)", opts)
 keymap("n", "<C-[>", "<Plug>(cokeline-switch-prev)", opts)
 keymap("n", "<C-]>", "<Plug>(cokeline-switch-next)", opts)
 -- Close Buffer
-keymap("n", "<C-w>", ":bd<CR>", opts)
+keymap("n", "<C-w>", ":bp|bd #<CR>", opts)
 
 -- ====== Options ======
 -- Toggle Spellcheck
@@ -137,4 +137,3 @@ keymap("", "<C-h>", "", opts)
 keymap("", "<C-j>", "", opts)
 keymap("", "<C-k>", "", opts)
 keymap("", "<C-l>", "", opts)
-

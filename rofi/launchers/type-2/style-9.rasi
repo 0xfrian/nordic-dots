@@ -11,7 +11,7 @@
 configuration {
 	modi:                       "drun";
     show-icons:                 true;
-    display-drun:               "🚀 Applications";
+    display-drun:               "Launch";
 	drun-display-format:        "{name}";
 }
 
@@ -59,19 +59,19 @@ inputbar {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               100%;
+    border-radius:               10px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @foreground;
-    children:                    [ "prompt", "textbox-prompt-colon", "entry" ];
+    children:                    [ "prompt", "entry" ];
 }
 
 prompt {
     enabled:                     true;
     padding:                     15px;
-    border-radius:               100%;
+    border-radius:               10px 0 0 10px;
     background-color:            @selected;
-    text-color:                  @background;
+    text-color:                  @foreground;
 }
 textbox-prompt-colon {
     enabled:                     true;
@@ -83,12 +83,12 @@ textbox-prompt-colon {
 }
 entry {
     enabled:                     true;
-    padding:                     15px 0px;
+    padding:                     15px 30px;
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search...";
-    placeholder-color:           inherit;
+    placeholder-color:           rgba(216, 222, 233, 0.3);
 }
 
 /*****----- Listview -----*****/
@@ -140,13 +140,13 @@ element normal.normal {
     text-color:                  @foreground;
 }
 element selected.normal {
-    border-radius:               100%;
+    border-radius:               10px;
     background-color:            @background-alt;
     text-color:                  @selected;
 }
 element-icon {
     padding:                     0px;
-    border-radius:               100%;
+    border-radius:               10px;
     background-color:            transparent;
     text-color:                  inherit;
     size:                        48px;

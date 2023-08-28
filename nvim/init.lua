@@ -31,4 +31,5 @@ vim.opt.rtp:prepend(lazypath)
 -- | Lazy Setup |
 -- +------------+
 require("lazy").setup("plugins")
+vim.cmd([[ colorscheme nord ]])
 

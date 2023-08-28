@@ -11,10 +11,10 @@ return {
       -- Set tab colors
       default_hl = {
         fg = function(buffer)
-          return buffer.is_focused and "#BD93F9" or "#F8F8F2"
+          return buffer.is_focused and "#D8DEE9" or "#D8DEE9"
         end,
         bg = function(buffer)
-          return buffer.is_focused and "#44475A" or "#34353B"
+          return buffer.is_focused and "#5E81AC" or "#3B4252"
         end,
       },
 

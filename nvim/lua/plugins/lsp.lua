@@ -33,6 +33,8 @@ local on_attach = function(_, bufnr)
   keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
   -- Show outline
   keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts)
+  -- Format code
+  keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
 end
 
 return {
