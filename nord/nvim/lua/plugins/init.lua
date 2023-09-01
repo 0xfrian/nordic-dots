@@ -35,6 +35,11 @@ return {
   "hrsh7th/cmp-path",
   "L3MON4D3/LuaSnip",
 
+  -- +------------+
+  -- | UI Plugins |
+  -- +------------+
+  "stevearc/dressing.nvim",
+
   -- +--------------------+
   -- | File Tree Explorer |
   -- +--------------------+
@@ -45,6 +50,11 @@ return {
   -- +--------------+
   "nvim-telescope/telescope.nvim",
   "nvim-telescope/telescope-fzf-native.nvim",
+
+  -- +-------------+
+  -- | Icon Picker |
+  -- +-------------+
+  "ziontee113/icon-picker.nvim",
 
   -- +-----------+
   -- | Dashboard |
@@ -88,11 +98,6 @@ return {
   -- | Colorizer |
   -- +-----------+
   "norcalli/nvim-colorizer.lua",
-
-  -- +-----------+
-  -- | Which-Key |
-  -- +-----------+
-  "folke/which-key.nvim",
 
   -- +-------------+
   -- | Diagnostics |
