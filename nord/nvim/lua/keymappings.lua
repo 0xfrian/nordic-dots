@@ -53,7 +53,14 @@ keymap("n", "<C-S-Tab>",  "<Plug>(cokeline-focus-prev)", opts)
 keymap("n", "<C-[>", "<Plug>(cokeline-switch-prev)", opts)
 keymap("n", "<C-]>", "<Plug>(cokeline-switch-next)", opts)
 -- Close Buffer
-keymap("n", "<C-w>", ":bp|bd #<CR>", opts)
+function close_buffer()
+  if #vim.fn.getbufinfo({ buflisted = true}) == 1 then
+    vim.cmd("bd")
+  else
+    vim.cmd("bp|bd #")
+  end
+end
+keymap("n", "<C-w>", ":lua close_buffer()<CR>", opts)
 
 -- ====== Options ======
 -- Toggle Spellcheck
@@ -109,6 +116,12 @@ keymap("n", "<C-g>", "<Cmd>Telescope live_grep<CR>", opts)
 keymap("i", "<C-g>", "<Cmd>Telescope live_grep<CR>", opts)
 keymap("v", "<C-g>", "<Cmd>Telescope live_grep<CR>", opts)
 
+
+-- ====== Icon-Picker ======
+-- Pick icon and yank to clipboard
+keymap("n", "<C-e>", "<Cmd>IconPickerNormal emoji<CR>", opts)
+keymap("i", "<C-e>", "<Esc><Cmd>IconPickerNormal emoji<CR>", opts)
+
 -- ====== Trouble ======
 -- Toggle Trouble window
 keymap("n", "<Leader>x", "<Cmd>TroubleToggle<CR>", opts)
@@ -137,3 +150,4 @@ keymap("", "<C-h>", "", opts)
 keymap("", "<C-j>", "", opts)
 keymap("", "<C-k>", "", opts)
 keymap("", "<C-l>", "", opts)
+keymap("", "<C-S-u>", "", opts)

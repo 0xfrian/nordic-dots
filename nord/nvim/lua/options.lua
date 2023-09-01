@@ -13,7 +13,7 @@ vim.opt.clipboard = "unnamedplus" -- enable clipboard copy/paste
 -- +--------------+
 -- | Line Numbers |
 -- +--------------+
-vim.opt.number = true -- enable line numbers
+vim.opt.number = false -- enable line numbers
 vim.opt.numberwidth = 1 -- set width of line number column
 
 -- +----------------------------+
@@ -56,6 +56,8 @@ vim.opt.cursorcolumn = true -- enable column highlight
 vim.opt.termguicolors = true -- enable more colors
 -- vim.opt.background = "dark" -- enable dark background
 vim.opt.signcolumn = "yes" -- enable sign column
+vim.opt.fillchars = { eob = " "}  -- remove tilde symbol on empty lines
+
 
 -- +------+
 -- | Misc |
