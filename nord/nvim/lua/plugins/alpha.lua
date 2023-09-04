@@ -1,8 +1,4 @@
--- +---------------+
--- |               |
--- |   alpha.lua   |
--- |               |
--- +---------------+
+-- plugins/alpha.lua
 
 return {
   "goolord/alpha-nvim",
@@ -23,27 +19,27 @@ return {
     dashboard.section.buttons.val = {
       dashboard.button(
         "<Space>",
-        "  Continue",
+        "🤓 Continue",
         ":enew<CR>"
       ),
       dashboard.button(
         "f",
-        "  Find File",
+        "🗃️ Find File",
         ":Telescope find_files<CR>"
       ),
       dashboard.button(
         "t",
-        "  Find Text",
+        "🔍 Find Text",
         ":Telescope live_grep<CR>"
       ),
       dashboard.button(
         "c",
-        "  Nvim Config",
+        "⚙️  NeoVim Config",
         ":e ~/.config/nvim/<CR>"
       ),
       dashboard.button(
         "q",
-        "  Quit",
+        "🥺 Quit",
         ":qa<CR>"
       ),
     }

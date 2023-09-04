@@ -1,9 +1,4 @@
--- +-----------------+
--- |                 |
--- |   lualine.lua   |
--- |                 |
--- +-----------------+
-
+-- plugins/lualine.lua
 
 return {
   "nvim-lualine/lualine.nvim",
@@ -11,10 +6,9 @@ return {
     require("lualine").setup({
       options = {
         icons_enabled = true,
-        -- theme = 'dracula',
-        theme = 'nord',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        theme = "nord",
+        component_separators = { left = "", right = ""},
+        section_separators = { left = "", right = ""},
         disabled_filetypes = { "neo-tree" },
         always_divide_middle = true,
         globalstatus = false,
@@ -27,9 +21,9 @@ return {
             'filename',
             path = 3,
             symbols = {
-              modified = "[*]",          -- current changes are unsaved
-              readonly = "[read]",       -- current file is read-only
-              unnamed = "[unnamed]",     -- text to show for unnamed buffers
+              modified = "[*]",
+              readonly = "[read-only]",
+              unnamed = "",
             }
           }
         },
@@ -45,9 +39,9 @@ return {
             'filename',
             path = 3,
             symbols = {
-              modified = "[*]",          -- current changes are unsaved
-              readonly = "[read]",       -- current file is read-only
-              unnamed = "[unnamed]",     -- text to show for unnamed buffers
+              modified = "[*]",
+              readonly = "[read-only]",
+              unnamed = "",
             }
           }
         },

@@ -1,12 +1,8 @@
--- +-------------+
--- |             |
--- |   cmp.lua   |
--- |             |
--- +-------------+
+-- plugins/cmp.lua
 
 return {
   "hrsh7th/nvim-cmp",
-  config = function() 
+  config = function()
     local cmp = require("cmp")
     cmp.setup({
       window = {
@@ -28,19 +24,11 @@ return {
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
       }),
 
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
-      },
-
       sources = cmp.config.sources({
         { name = "nvim_lsp" },  -- lsp
-        { name = "luasnip" },   -- snippets
-        { name = "buffer" },    -- text within current buffer
         { name = "path" },      -- file system paths
+        { name = "buffer" },    -- text within current buffer
       }),
     })
   end,
 }
-

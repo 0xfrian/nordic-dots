@@ -1,46 +1,36 @@
--- +-------------+
--- |             |
--- |   lsp.lua   |
--- |             |
--- +-------------+
+-- plugins/lsp.lua
 
--- Define keymap alias for conciseness
+-- Define keymap alias
 local keymap = vim.keymap
 
-  -- +-------------------+
-  -- | Set Up Completion |
-  -- +-------------------+
 -- Enable auto-completion on available LSP servers
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+-- Assign LSP Saga keymappings to each buffer
 local on_attach = function(_, bufnr)
   -- Set keybind options
   local opts = { noremap = true, silent = true, buffer = bufnr }
-
   -- Show definition
   keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
   -- Peek definition
   keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
-  keymap.set("n", "ge", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
-  -- Show available documentation on cursor
+  -- Show documentation on cursor
   keymap.set("n", "gn", "<cmd>Lspsaga hover_doc<CR>", opts)
-  -- Show code action(s)
-  keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>", opts)
   -- Rename variable
-  keymap.set("n", "gr", "<cmd>Lspsag rename<CR>", opts)
+  keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
+  -- Show diagnostics on current line
+  keymap.set("n", "ge", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
   -- Jump to prev/next diagnostic
   keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
   keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-  -- Show outline
-  keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts)
   -- Format code
-  keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
+  keymap.set('n', '<leader>f', function()
+    vim.lsp.buf.format { async = true }
+  end, opts)
 end
 
 return {
-  -- +-------+
-  -- | Mason |
-  -- +-------+
+  -- Mason
   {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
@@ -48,10 +38,6 @@ return {
       require("mason").setup()
     end,
   },
-
-  -- +------------------+
-  -- | Mason LSP Config |
-  -- +------------------+
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
@@ -59,32 +45,29 @@ return {
     end,
   },
 
-  -- +----------+
-  -- | LSP Saga |
-  -- +----------+
+  -- LSP Saga
   {
-    "glepnir/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     config = function()
       require("lspsaga").setup({
-        ui = {
-          title = true,
-          border = "rounded",
-        },
-        lightbulb = {
-          enable = false,
-        },
+        ui = { title = true, border = "rounded" },
+        lightbulb = { enable = false },
       })
     end,
   },
 
-  -- +-----------------+
-  -- | Nvim LSP Config |
-  -- +-----------------+
+  -- Neovim LSP-Config
   {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+
+      -- Bash: bashls
+      lspconfig.bashls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+      })
 
       -- CSS: cssls
       lspconfig.cssls.setup({
@@ -115,9 +98,6 @@ return {
           Lua = {
             runtime = { version = "LuaJIT" },
             diagnostics = { globals = { "vim" } },
-            -- workspace = {
-            --   library = vim.api.nvim_get_runtime_file("", true),
-            -- },
             telemetry = { enable = false },
           },
         },
@@ -149,4 +129,3 @@ return {
     end,
   },
 }
-

@@ -1,19 +1,6 @@
--- +--------------+
--- |              |
--- |   init.lua   |
--- |              |
--- +--------------+
+-- init.lua
 
-
--- +-----------------------+
--- | Keymappings + Options |
--- +-----------------------+
-require("keymappings")
-require("options")
-
--- +-------------------+
--- | Install lazy.nvim |
--- +-------------------+
+-- Install lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -27,9 +14,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- +------------+
--- | Lazy Setup |
--- +------------+
-require("lazy").setup("plugins")
-vim.cmd([[ colorscheme nord ]])
-
+require("keymappings") -- Set keymappings
+require("options") -- Set options
+require("lazy").setup("plugins") -- Set plugins

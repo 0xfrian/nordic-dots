@@ -1,8 +1,4 @@
--- +------------------+
--- |                  |
--- |   cokeline.lua   |
--- |                  |
--- +------------------+
+-- plugins/cokeline.lua
 
 return {
   "willothy/nvim-cokeline",
@@ -17,6 +13,17 @@ return {
           return buffer.is_focused and "#5E81AC" or "#3B4252"
         end,
       },
+
+      -- Set sidebar
+  sidebar = {
+    filetype = 'NvimTree',
+    components = {
+      {
+        text = '  File Explorer',
+        style = 'bold',
+      },
+    }
+  },
 
       -- Set individual tab components
       components = {
@@ -33,9 +40,6 @@ return {
           text = function(buffer)
             return buffer.filename .. " "
           end,
-          -- style = function(buffer)
-          --   return buffer.is_focused and "underline" or nil
-          -- end,
         },
         {
           text = function(buffer)

@@ -1,8 +1,4 @@
--- +-----------------+
--- |                 |
--- |   comment.lua   |
--- |                 |
--- +-----------------+
+-- plugins/comment.lua
 
 return {
   "numToStr/Comment.nvim",
@@ -10,4 +6,3 @@ return {
     require("Comment").setup()
   end,
 }
-

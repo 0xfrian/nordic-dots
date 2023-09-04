@@ -1,8 +1,4 @@
--- +----------------------+
--- |                      |
--- |   icon-picker.lua    |
--- |                      |
--- +----------------------+
+-- plugins/icon-picker.lua
 
 return {
   "ziontee113/icon-picker.nvim",

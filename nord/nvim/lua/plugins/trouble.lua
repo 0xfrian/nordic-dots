@@ -1,8 +1,4 @@
--- +-----------------+
--- |                 |
--- |   trouble.lua   |
--- |                 |
--- +-----------------+
+-- plugins/trouble.lua
 
 return {
   "folke/trouble.nvim",
@@ -10,4 +6,3 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
 }
-
