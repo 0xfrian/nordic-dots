@@ -5,7 +5,7 @@
 This repository contains the dot-files for my Arch Linux
 configuration.
 
-Check out [Nord](https://www.nordtheme.com/)-themed dot-files [here](/nord/README.md)
+Check out [Nord](https://www.nordtheme.com/)-themed dot-files [here](/nord/)
 
 ---
 
