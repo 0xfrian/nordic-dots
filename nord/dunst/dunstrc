@@ -1,104 +1,57 @@
-# See dunst(5) for all configuration options
-
 [global]
-    ### Display ###
-    monitor = 0
-    follow = mouse
 
-    ### Geometry ###
-    width = 300
-    height = 300
-    origin = top-right
-    offset = 50x50
-    scale = 0
+# ===== Colors =======================================================
+foreground = "#D8DEE9"
+background = "#2E3440B3"
 
-    ### Progress bar ###
-    progress_bar = true
-    progress_bar_height = 10
-    progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
+# ===== Geometry =====================================================
+width = 300
+height = 200
+origin = bottom-right
+offset = 20x20
+padding = 12
+alignment = left
+vertical_alignment = top
 
-    ### Padding ###
-    padding = 8
-    horizontal_padding = 10
-    text_icon_padding = 0
+# ===== Gap + Separator ==============================================
+frame_width = 0
+separator_height = 0
+gap_size = 20
 
-    ### Frame ###
-    frame_width = 2
-    frame_color = "#bd93f9"
-    corner_radius = 8
+# ===== Text =========================================================
+format = "<b>%a</b> \n %s \n %p \n %b"
+font = JetBrains Mono 12
+markup = full
 
-    ### Separator ###
-    separator_color = frame
-    separator_height = 1
+# ===== Icons ========================================================
+icon_position = left
+icon_corner_radius = 10
+max_icon_size = 48
+icon_theme = nordzy-dark
+icon_path = /usr/share/icons/nordzy-dark/actions/
 
-    ### Misc ###
-    sort = yes
-    idle_threshold = 120
-    indicate_hidden = yes
-    transparency = 15
-    notification_limit = 0
-    show_age_threshold = 60
-    ignore_newline = no
-    stack_duplicates = false
-    hide_duplicate_count = false
-    show_indicators = no
+# ===== Progress Bar =================================================
+progress_bar = true
+progress_bar_height = 10
+progress_bar_frame_width = 1
+progress_bar_min_width = 150
+progress_bar_max_width = 300
+progress_bar_corner_radius = 10
 
-    ### Text ###
-    font = JetBrains Mono 12
-    line_height = 0
-    markup = full
+# ===== History ======================================================
+mouse_left_click = close_current
+timeout = 10
+sticky_history = yes
+history_length = 20
 
-    ### Format ###
-    format = "%s %p\n%b"
-    alignment = left
-    vertical_alignment = center
-    ellipsize = end
-
-    ### Icons ###
-    icon_position = left
-    min_icon_size = 0
-    max_icon_size = 64
-    icon_path = /usr/share/icons/dracula/16x16/actions/:/usr/share/icons/dracula/16x16/devices/
-
-    ### History ###
-    sticky_history = yes
-    history_length = 20
-
-    ### Misc/Advanced ###
-    dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/firefox -new-tab
-    always_run_script = true
-    title = Dunst
-    class = Dunst
-    ignore_dbusclose = false
-
-    ### Wayland ###
-    force_xwayland = false
-    force_xinerama = false
-
-    ### mouse
-    mouse_left_click = close_current
-    mouse_middle_click = none
-    mouse_right_click = none
-
-[experimental]
-    per_monitor_dpi = false
-
-[urgency_low]
-    background = "#44475a"
-    foreground = "#f8f8f2"
-    timeout = 10
-
-[urgency_normal]
-    background = "#44475a"
-    foreground = "#f8f8f2"
-    timeout = 10
-
-[urgency_critical]
-    background = "#ff5555"
-    foreground = "#f8f8f2"
-    frame_color = "#ff5555"
-    timeout = 0
-
+# ===== Misc =========================================================
+sort = yes
+ellipsize = end
+ignore_newline = no
+idle_threshold = 120
+indicate_hidden = yes
+show_indicators = yes
+notification_limit = 0
+show_age_threshold = 60
+stack_duplicates = false
+hide_duplicate_count = false
