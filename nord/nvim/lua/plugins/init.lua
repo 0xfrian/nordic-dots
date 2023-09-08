@@ -24,10 +24,11 @@ return {
   "windwp/nvim-autopairs", -- auto-complete brackets/delimiters
 
   -- ===== Language Server Protocols =================================
-  "neovim/nvim-lspconfig", -- LSP config manager
+  "neovim/nvim-lspconfig", -- LSP manager
   "williamboman/mason.nvim", -- LSP package manager
-  "williamboman/mason-lspconfig.nvim", -- LSP config manager for mason
-  "nvimdev/lspsaga.nvim",
+  "williamboman/mason-lspconfig.nvim", -- LSP manager for mason
+  "nvimdev/lspsaga.nvim", -- LSP enhancement
+  "L3MON4D3/LuaSnip", -- snippet engine
   -- =================================================================
 
   -- ===== Auto-Completion ===========================================
