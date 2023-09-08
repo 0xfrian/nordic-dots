@@ -1,12 +1,7 @@
 # 🧠 smexy dots 💅 
 ***smart 'n' sexy dot-files***
 
-#### About Me
-Just a newbie developer who yolo'd into Arch Linux and loves to kill
-time configuring dot-files.
-
-This repository is my attempt at sharing my dot-files with those who
-are interested.
+👋 Welcome to my dot-files repo!
 
 ---
 
