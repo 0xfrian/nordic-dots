@@ -5,7 +5,7 @@ foreground = "#D8DEE9"
 background = "#2E3440B3"
 
 # ===== Geometry =====================================================
-width = 300
+width = 400
 height = 200
 origin = bottom-right
 offset = 20x20
@@ -19,7 +19,7 @@ separator_height = 0
 gap_size = 20
 
 # ===== Text =========================================================
-format = "<b>%a</b> \n %s \n %p \n %b"
+format = "<b>%a</b> \n %s \n %p"
 font = JetBrains Mono 12
 markup = full
 
