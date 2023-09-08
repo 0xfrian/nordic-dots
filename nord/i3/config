@@ -107,6 +107,8 @@ gaps top 60
 exec --no-startup-id nm-applet
 # Run start-up script
 exec_always --no-startup-id ~/Configurations/start-up.sh
+# Restart pipewire audio drivers
+exec_always --no-startup-id ~/Configurations/audio-reset.sh
 
 # Open screencapture (flameshot)
 bindsym $mod+Shift+s exec flameshot gui
