@@ -37,8 +37,14 @@ Check out [Nord](https://www.nordtheme.com/)-themed dot-files [here](/nord/)
 - Compositor: [picom](https://github.com/yshui/picom)
 - Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
+🚀 Apps
+- [BetterDiscord](https://betterdiscord.app/)
+- [Spicetify](https://spicetify.app/)
+
 🎨 Themes
 - [Nord](https://www.nordtheme.com/)
     - [NeoVim](https://github.com/shaunsingh/nord.nvim)
     - [Nordzy Icons](https://github.com/alvatip/Nordzy-icon)
     - [Nordzy Cursors](https://github.com/alvatip/Nordzy-cursors)
+    - [BetterDiscord](https://betterdiscord.app/theme/Nordic)
+    - [Spicetify](https://github.com/Tetrax-10/Nord-Spotify)
