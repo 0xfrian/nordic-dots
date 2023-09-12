@@ -10,7 +10,7 @@
     >
 </picture>
 
-More images [here]("/images")
+More images [here](/images)
 
 ---
 
