@@ -5,14 +5,15 @@ return {
   "shaunsingh/nord.nvim", -- colorscheme
   "willothy/nvim-cokeline", -- buffer line (top)
   "nvim-lualine/lualine.nvim", -- status line (bottom)
-  -- "nvim-neo-tree/neo-tree.nvim", -- file explorer
   "nvim-tree/nvim-tree.lua", -- file explorer
   "goolord/alpha-nvim", -- dashboard
   "folke/trouble.nvim", -- diagnostics
   "nvim-treesitter/nvim-treesitter", -- syntax highlighting
   "lewis6991/gitsigns.nvim", -- git indicators
-  "stevearc/dressing.nvim", -- ui improvements
+  "stevearc/dressing.nvim", -- UI improvements
+  "folke/noice.nvim", -- UI improvements
   "lukas-reineke/indent-blankline.nvim", -- outline indentations
+  "lukas-reineke/headlines.nvim", -- highlight markdown headlines
   "iamcco/markdown-preview.nvim", -- preview markdown
   "norcalli/nvim-colorizer.lua", -- highlight color values
 
@@ -24,10 +25,10 @@ return {
   "windwp/nvim-autopairs", -- auto-complete brackets/delimiters
 
   -- ===== Language Server Protocols =================================
-  "neovim/nvim-lspconfig", -- LSP manager
+  "neovim/nvim-lspconfig", -- LSP configs
   "williamboman/mason.nvim", -- LSP package manager
-  "williamboman/mason-lspconfig.nvim", -- LSP manager for mason
-  "nvimdev/lspsaga.nvim", -- LSP enhancement
+  "williamboman/mason-lspconfig.nvim", -- LSP configs for mason
+  "nvimdev/lspsaga.nvim", -- LSP improvement
   "L3MON4D3/LuaSnip", -- snippet engine
   -- =================================================================
 

@@ -6,10 +6,12 @@ return {
     local cmp = require("cmp")
     cmp.setup({
       snippet = {
+        -- Configure luasnip
         expand = function(args)
           require('luasnip').lsp_expand(args.body)
         end,
       },
+
       window = {
         completion = {
           border = "rounded",

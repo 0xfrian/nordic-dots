@@ -14,10 +14,16 @@ local on_attach = function(_, bufnr)
   keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
   -- Peek definition
   keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
+  -- See references
+  keymap.set("n", "gR", vim.lsp.buf.references, opts)
+  -- See implementation
+  keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
   -- Show documentation on cursor
   keymap.set("n", "gn", "<cmd>Lspsaga hover_doc<CR>", opts)
   -- Rename variable
   keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
+  -- Code Action
+  keymap.set("n", "ga", "<cmd>Lspsaga code_action<CR>", opts)
   -- Show diagnostics on current line
   keymap.set("n", "ge", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
   -- Jump to prev/next diagnostic

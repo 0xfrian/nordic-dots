@@ -130,7 +130,7 @@ keymap("x", "<", "<gv", opts)
 keymap("x", ">", ">gv", opts)
 
 -- ===== Unmap Keys ==================================================
-keymap("", "<Space>", "<Nop>", opts)
+keymap("", "<Space>", "", opts)
 keymap("", "q", "", opts)
 keymap("", "<C-c>", "", opts)
 keymap("", "<C-a>", "", opts)

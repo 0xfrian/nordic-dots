@@ -7,8 +7,13 @@ return {
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = {
+          "bash",
+          "cmake",
+          "lua",
           "markdown",
           "markdown_inline",
+          "regex",
+          "vim",
         },
         auto_install = true,
         highlight = { enable = true },

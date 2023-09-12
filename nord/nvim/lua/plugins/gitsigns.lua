@@ -6,4 +6,3 @@ return {
     require("gitsigns").setup()
   end,
 }
-

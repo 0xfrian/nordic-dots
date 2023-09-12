@@ -1,7 +1,7 @@
 -- options.lua
 
 -- ===== Line Numbers and Wrapping ===================================
-vim.opt.number = false -- enable line numbers
+vim.opt.number = true -- enable line numbers
 vim.opt.numberwidth = 1 -- set width of line number column
 vim.opt.wrap = true -- enable line wrapping
 vim.opt.wrapmargin = 0
