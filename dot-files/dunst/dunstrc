@@ -9,7 +9,7 @@ width = 400
 height = 200
 origin = bottom-right
 offset = 20x20
-padding = 12
+padding = 10
 alignment = left
 vertical_alignment = top
 
@@ -39,12 +39,12 @@ progress_bar_max_width = 300
 progress_bar_corner_radius = 10
 
 # ===== History ======================================================
-mouse_left_click = close_current
 timeout = 10
 sticky_history = yes
 history_length = 20
 
 # ===== Misc =========================================================
+mouse_left_click = close_current
 sort = yes
 ellipsize = end
 ignore_newline = no
