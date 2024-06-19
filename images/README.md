@@ -48,7 +48,7 @@
     >
 </picture>
 
-6. Dunst
+6. Dunst + rofi
 
 <picture>
     <img
