@@ -1,4 +1,4 @@
-# ❄️  nordic-dots
+# ❄️  nordic-dots 🎨
 ***dot-files with a [nord](https://www.nordtheme.com/) theme***
 
 
