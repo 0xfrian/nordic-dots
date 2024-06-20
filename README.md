@@ -10,6 +10,13 @@
     >
 </picture>
 
+<picture>
+    <img
+        alt="Screencapture of Nord theme"
+        src="./images/nord-2.png"
+    >
+</picture>
+
 More images [here](/images)
 
 ---
